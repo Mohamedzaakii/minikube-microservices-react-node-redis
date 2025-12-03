@@ -25,10 +25,9 @@ This project demonstrates a full-stack microservices application deployed on Kub
 - ConfigMaps & Secrets for environment variables
 - Fully containerized, deployable locally
 - Automated CI/CD pipeline for Docker images
+  
 ## 📊 Architecture Diagram
-
-
-
+![diagram](screenshots/diagram.png)
 
 ## Getting Started (Local)
 
@@ -63,11 +62,12 @@ kubectl -n demo port-forward svc/backend-service 5000:80
 curl http://127.0.0.1:5000/api/time
 ```
 ## Frontend
-
+![Frontend UI](screenshots/frontend.png)
 - React app fetches /api/time from backend
 - Cached responses demonstrate Redis usage
   
 ## CI/CD Workflow (GitHub Actions)
+![Workflow](screenshots/workflow.png)
 - Triggered on push to main branch
 - Builds backend & frontend Docker images
 - Logs in to DockerHub (using secrets: DOCKERHUB_USERNAME & DOCKERHUB_TOKEN)
@@ -91,111 +91,3 @@ curl http://127.0.0.1:5000/api/time
 | Secret                  | Sensitive data (JWT, Redis password)    |
 | HorizontalPodAutoscaler | Scales backend pods automatically       |
 | PersistentVolumeClaim   | Redis data persistence                  |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
