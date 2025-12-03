@@ -1,4 +1,4 @@
-        name: CI/CD
+name: CI/CD
 on:
   push:
     branches: [ main ]
@@ -35,6 +35,4 @@ jobs:
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/demo-frontend:latest
 
-    - name: (Optional) Deploy to Kubernetes
-      run: |
-        echo "kubectl apply -f k8s/ --namespace=demo"
+   
